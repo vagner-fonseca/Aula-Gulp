@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Projeto Site pessoal com Gulp</title>
+
+
+    @@include('./inc/header.html')
+
+
+
+
+</head>
+
+<body>
+    @@include('./inc/nav.html')
+
+
+    <div class="jumbotron header-animado text-center">
+        <div class="container">
+            <p class="header-animado__title">O que ando fazendo </p>
+            <h1 class="header-animado__subtitle">Veja alguns dos meus trabalhos</h1>
+        </div>
+
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Último Trabalhos</h2>
+            </div>
+
+            @@loop('./inc/card.html', [
+            {
+                "titulo": "Titulo 1",
+                "imagem": "imagens/portfolio/03.jpg",
+                "alt": "alt 1",
+                "texto": "texto 1",
+                "link": "#"
+            },
+            {
+                "titulo": "Titulo 4",
+                "imagem": "imagens/portfolio/04.jpg",
+                "alt": "alt 4",
+                "texto": "texto 4",
+                "link": "#"
+            },
+            {
+                "titulo": "Titulo 6",
+                "imagem": "imagens/portfolio/06.jpg",
+                "alt": "alt 6",
+                "texto": "texto 6",
+                "link": "#"
+            },
+
+            {
+                "titulo": "Titulo 1",
+                "imagem": "imagens/portfolio/03.jpg",
+                "alt": "alt 1",
+                "texto": "texto 1",
+                "link": "#"
+            },
+            {
+                "titulo": "Titulo 4",
+                "imagem": "imagens/portfolio/04.jpg",
+                "alt": "alt 4",
+                "texto": "texto 4",
+                "link": "#"
+            },
+            {
+                "titulo": "Titulo 6",
+                "imagem": "imagens/portfolio/06.jpg",
+                "alt": "alt 6",
+                "texto": "texto 6",
+                "link": "#"
+            }
+           
+            
+            ])
+         
+
+            
+
+
+
+
+        </div> <!-- row-->
+        <hr>
+
+    </div> <!-- container-->
+
+
+
+    @@include('./inc/footer.html')
+
+    <script src="javascript/app.min.js"></script>
+</body>
+
+</html>
